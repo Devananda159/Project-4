@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <a [routerLink]="['/product']" class="back-link">← Back to Products</a>
+    <div class="card">
+        <div class="row no-gutters">
+            <div class="col-md-6">
+                 <img [src]='singleproduct?.image' alt="Product Image" class="card-img product-detail-img"> 
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h2 class="card-title">{{singleproduct?.title}}</h2>
+                    <p class="card-text">{{singleproduct?.description}}</p>
+                    <p class="card-text"><strong>Price: ${{singleproduct?.price}}</strong></p>
+                    <p class="card-text"><small class="text-muted">Category: {{singleproduct?.category}}</small></p>
+                    <p class="card-text"><small class="text-muted">Rating: {{singleproduct?.rating?.rate}} ({{singleproduct?.rating?.count}} reviews)</small></p>
+                    <a [routerLink]="['/product']" class="btn btn-secondary">Back to Products</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

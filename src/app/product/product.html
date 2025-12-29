@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Products</h1>
+    
+    <div class="row">
+        @for(item of product; track item.id) {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <a [routerLink]="['/singleview-list', item.id]">
+                        <img [src]="item.image" alt="Product Image" class="card-img-top product-img">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title"><a [routerLink]="['/singleview-list', item.id]" class="product-link">{{item.title}}</a></h5>
+                        <p class="card-text">${{item.price}}</p>
+                        <a [routerLink]="['/singleview-list', item.id]" class="product-details-link">Product Details</a>
+                        <a [routerLink]="['/singleview-list', item.id]" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
